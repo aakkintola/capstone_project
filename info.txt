@@ -1,0 +1,11 @@
+export ACR_REGISTRY=akintolacr.azurecr.io
+export ACR_NAMESPACE=app1
+export ACR_IMAGE_NAME=akintola-app
+export ACR_IMAGE_TAG=v1
+
+akintolacr.azurecr.io/app1/akintola-app:v1
+
+export ACR_NAME=akintolaCR
+echo $ACR_NAME
+
+az aks update -n akintola-aks-cluster -g akintola-capstone-project --attach-acr $ACR_NAME
